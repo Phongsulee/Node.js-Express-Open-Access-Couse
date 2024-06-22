@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,"/public/")));
@@ -14,7 +14,7 @@ app.get("/", (req,res) =>{
     res.send('Hello Torza Co,. Ltd. // GG_EZ_55');
 })
 
-app.listen(port, ()=>{
+app.listen(PORT, ()=>{
     // console.log("Listining on port" + chalk.red(" : "+port));            #คำสั่ง console.log
-    debug("Listining on port" + chalk.red(" : "+port));
+    debug("Listining on port" + chalk.red(" : "+PORT));
 })
