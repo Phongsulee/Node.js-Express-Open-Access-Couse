@@ -82,6 +82,10 @@
   <section id="hero-area" class="header-area header-eight">
     <div class="container">
       <h1>Hello</h1>
+      <% products.map((product)=>{ %>
+        <h4><%=product.productTitle%></h4>
+        <p><%=product.productDescription%></p>
+      <%})%>
     </div>
   </section>
   
