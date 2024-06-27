@@ -1,5 +1,5 @@
 const express = require('express');
-const productRouter = express.Router();
+const productsRouter = express.Router();
 const products = require("./data/products.json");
 
 productsRouter.route("/").get((req, res) => {
