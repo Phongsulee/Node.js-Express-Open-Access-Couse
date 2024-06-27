@@ -82,13 +82,13 @@
   <section id="hero-area" class="header-area header-eight">
     <div class="container">
       <h1>Products</h1>
-      
+      <% products.map((product)=>{ %>
         <h4>
           <a href="/product/<%=product.id%>"><%=product.productTitle%></a>
         </h4>
         <p><%=product.productDescription%></p>
         <p>ราคา : <%=product.productPrice%> บาท</p>
-      
+      <%})%>
     </div>
   </section>
   
