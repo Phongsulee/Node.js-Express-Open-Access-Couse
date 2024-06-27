@@ -83,7 +83,9 @@
     <div class="container">
       <h1>Hello</h1>
       <% products.map((product)=>{ %>
-        <h4><%=product.productTitle%></h4>
+        <h4>
+          <a href="/product/<%=product.id%>"><%=product.productTitle%></a>
+        </h4>
         <p><%=product.productDescription%></p>
         <p>ราคา : <%=product.productPrice%> บาท</p>
       <%})%>
