@@ -1,6 +1,6 @@
 const express = require('express');
 const productRouter = express.Router();
-const products = require("../data/products.json");
+const products = require("./data/products.json");
 
 productsRouter.route("/").get((req, res) => {
     //res.send("Hello World !! I'm Torza-0");
