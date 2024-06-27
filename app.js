@@ -15,18 +15,18 @@ app.use(express.static(path.join(__dirname, "/public/")));
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
-productRouter.route("/").get((req,res) =>{
+productRouter.route("/").get((req, res) => {
     //res.send("Hello World !! I'm Torza-0");
-    res.render("products",{
+    res.render("products", {
         products,
     }
     );
 });
 
-productRouter.route("/:id").get((req,res) =>{
+productRouter.route("/:id").get((req, res) => {
     const id = req.params.id;
     //res.send("Hello World !! I'm Torza-1" +id);
-    res.render("product",{
+    res.render("product", {
         product: products[id],
     })
 });
